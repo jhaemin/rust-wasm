@@ -15,8 +15,15 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-    let mut hello = "Hello, ".to_owned();
-    hello.push_str(name);
+    // Original implementation
+    // using string concatenation
 
-    alert(hello.as_str());
+    // let mut hello = "Hello, ".to_owned();
+    // hello.push_str(name);
+
+    // alert(hello.as_str());
+
+    // Simplified version
+    // using the `format` macro
+    alert(&format!("Hello, {}!", name));
 }
